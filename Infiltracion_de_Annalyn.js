@@ -1,2 +1,2 @@
 //Infiltracion de Annalyn
-console,log("AAAa")
+console.log("AAAa")
