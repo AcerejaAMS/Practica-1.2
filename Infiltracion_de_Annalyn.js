@@ -2,23 +2,12 @@
 
 //Creacion de funciones de apoyo
 function valorIndice(p){
-    v=Math.random(1);
+    if(p===1)
+        v=Math.floor(Math.random()*(0)+2);
 
-    if(p===1){
-        if(v<=0.5){
-            return(2);
-        }
-        else{
-            return(3);
-        }
-    }else{
-        if(v<=0.5){
-            return(0);
-        }
-        else{
-            return(1);
-        }
-    }
+    else
+        v=Math.floor(Math.random()*(2));   
+    return(v);
 }
 
 //Define variables y estados
