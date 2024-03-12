@@ -35,6 +35,7 @@ console.log(timeToMixJuice(jugos[4]));
 console.log(timeToMixJuice(jugos[5]));
 console.log(timeToMixJuice(jugos[6]));
 
+//Punto 2
 function limesToCut(cantidadGajos, limas) {
     // Contador de limas a cortar
     let limasACortar = 0;
@@ -73,7 +74,7 @@ function limesToCut(cantidadGajos, limas) {
     return limasACortar;
   }
 
-//Prueba de ejemplo  
+//Prueba de ejemplo punto 2 
 const cantidadGajos = 20;
 const limas = ["pequeña", "mediana", "grande", "pequeña"];
   
