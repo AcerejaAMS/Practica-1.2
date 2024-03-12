@@ -79,4 +79,38 @@ const limas = ["pequeña", "mediana", "grande", "pequeña"];
   
 const limasACortar = limesToCut(cantidadGajos, limas);  
 console.log(`Li Mei necesita cortar ${limasACortar} limas.`);
-    
+
+//Parte 3
+
+const pedidosRestantes = (minutosRestantes, jugos) => {
+  // Pedidos que Dmitry 
+  const pedidosParaDmitry = [];
+
+  // Tiempo de preparación de cada jugo (en minutos)
+  const tiempoPreparacion = {
+    "jugoVerde": 5,
+    "jugoNaranja": 7,
+    "jugoDetox": 10,
+  };
+
+  // Recorrer la lista de jugos
+  for (const jugo of jugos) {
+    // Si no hay tiempo suficiente para preparar el jugo, agregarlo a la lista
+    if (minutosRestantes < tiempoPreparacion[jugo]) {
+      pedidosParaDmitry.push(jugo);
+    } else {
+      // Restar el tiempo de preparación del jugo al tiempo restante
+      minutosRestantes -= tiempoPreparacion[jugo];
+    }
+  }
+
+  // Devolver la lista de pedidos para Dmitry
+  return pedidosParaDmitry;
+};
+
+const minutosRestantes = 10;
+const jugos = ["jugoVerde", "jugoNaranja", "jugoDetox"];
+
+const pedidosParaDmitry = pedidosRestantes(minutosRestantes, jugos);
+
+console.log("Pedidos para Dmitry:", pedidosParaDmitry);
