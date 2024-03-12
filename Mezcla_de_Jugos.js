@@ -34,3 +34,49 @@ console.log(timeToMixJuice(jugos[3]));
 console.log(timeToMixJuice(jugos[4]));
 console.log(timeToMixJuice(jugos[5]));
 console.log(timeToMixJuice(jugos[6]));
+
+function limesToCut(cantidadGajos, limas) {
+    // Contador de limas a cortar
+    let limasACortar = 0;
+    // Contador de gajos obtenidos
+    let gajosObtenidos = 0;
+  
+    // Recorrer la lista de limas
+    for (const lima of limas) {
+      // Incrementar el contador de limas a cortar
+      limasACortar++;
+  
+      // Obtener la cantidad de gajos de la lima actual
+      let gajosPorLima = 0;
+      switch (lima) {
+        case "pequeña":
+          gajosPorLima = 6;
+          break;
+        case "mediana":
+          gajosPorLima = 8;
+          break;
+        case "grande":
+          gajosPorLima = 10;
+          break;
+      }
+  
+      // Sumar los gajos de la lima actual al total
+      gajosObtenidos += gajosPorLima;
+  
+      // Si ya se obtuvieron suficientes gajos, salir del ciclo
+      if (gajosObtenidos >= cantidadGajos) {
+        break;
+      }
+    }
+  
+    // Devolver la cantidad de limas a cortar
+    return limasACortar;
+  }
+
+//Prueba de ejemplo  
+const cantidadGajos = 20;
+const limas = ["pequeña", "mediana", "grande", "pequeña"];
+  
+const limasACortar = limesToCut(cantidadGajos, limas);  
+console.log(`Li Mei necesita cortar ${limasACortar} limas.`);
+    
